@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="MEGA-SENA"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/qntdJogos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a qntd de jogos"
+        android:inputType="number"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/qntdNumeros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a qntd de números (6 a 20)"
+        android:layout_margin="16dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/qntdJogos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/numerosSorteados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/roxo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qntdNumeros" />
+
+    <Button
+        android:id="@+id/btnGerarJogos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GERAR JOGOS"
+        app:layout_constraintEnd_toStartOf="@id/BtnLimpar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qntdNumeros"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/BtnLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="LIMPAR"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGerarJogos"
+        app:layout_constraintTop_toBottomOf="@+id/qntdNumeros" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
