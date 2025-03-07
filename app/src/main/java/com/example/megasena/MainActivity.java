@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         for (int num:nums) {
             str.append(num).append("-");
         }
-        //Tira ultimo traço
+        //Tira ultimo traço da sttring
         str.delete(str.length()-1, str.length());
         //Acrescenta quebra de linha
         str.append("\n\n");
